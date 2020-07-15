@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PerlinNoiseMovement : MonoBehaviour
 {
+    [SerializeField] float speed = 0.5f;
     [SerializeField] float magnitude = 0.5f;
     [SerializeField] float amplitude = 2f;
     [SerializeField] float offset = 1f;
@@ -16,6 +17,6 @@ public class PerlinNoiseMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localPosition = new Vector3(Mathf.PerlinNoise(0, Time.time) * amplitude + offset, 0, 0) * magnitude;
+        transform.localPosition = new Vector3(Mathf.PerlinNoise(0, Time.time * speed) * amplitude + offset, 0, 0) * magnitude;
     }
 }

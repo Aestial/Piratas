@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,7 @@ using UnityEngine.Purchasing;
 
 public class StartButton : MonoBehaviour
 {
+    [SerializeField] float delay;
     public void StartGame()
     {
         if (PlayerData.instance.ftueLevel == 0)
@@ -25,6 +27,12 @@ public class StartButton : MonoBehaviour
 #if UNITY_PURCHASING
         var module = StandardPurchasingModule.Instance();
 #endif
+        StartCoroutine(LoadDelay(delay));
+        //SceneManager.LoadScene("main");
+    }
+    private IEnumerator LoadDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         SceneManager.LoadScene("main");
     }
 }

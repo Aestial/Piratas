@@ -46,3 +46,11 @@ The following packages were updated:
   com.unity.addressables from version 1.8.3 to 1.8.4
   com.unity.ide.vscode from version 1.2.0 to 1.2.1
   com.unity.multiplayer-hlapi from version 1.0.4 to 1.0.6
+
+=== Fri Jul 17 12:52:19 2020
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.ads from version 3.4.5 to 3.4.7

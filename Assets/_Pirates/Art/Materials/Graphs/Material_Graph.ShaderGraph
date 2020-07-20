@@ -126,6 +126,12 @@
                 "fullName": "UnityEditor.Graphing.Edge"
             },
             "JSONnodeData": "{\n    \"m_OutputSlot\": {\n        \"m_SlotId\": 0,\n        \"m_NodeGUIDSerialized\": \"24e1f0d8-7ad4-42f6-9441-f3f5c5162499\"\n    },\n    \"m_InputSlot\": {\n        \"m_SlotId\": 1,\n        \"m_NodeGUIDSerialized\": \"ed70432e-be74-4f02-ab49-f8edf89f04ce\"\n    }\n}"
+        },
+        {
+            "typeInfo": {
+                "fullName": "UnityEditor.Graphing.Edge"
+            },
+            "JSONnodeData": "{\n    \"m_OutputSlot\": {\n        \"m_SlotId\": 7,\n        \"m_NodeGUIDSerialized\": \"ed70432e-be74-4f02-ab49-f8edf89f04ce\"\n    },\n    \"m_InputSlot\": {\n        \"m_SlotId\": 7,\n        \"m_NodeGUIDSerialized\": \"f528afb1-de0f-4760-a5d6-81687af7788a\"\n    }\n}"
         }
     ],
     "m_PreviewData": {
@@ -134,7 +140,7 @@
             "m_Guid": ""
         }
     },
-    "m_Path": "",
+    "m_Path": "—",
     "m_ConcretePrecision": 0,
     "m_ActiveOutputNodeGuidSerialized": "f528afb1-de0f-4760-a5d6-81687af7788a"
 }

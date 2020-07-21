@@ -33,6 +33,8 @@
             #pragma vertex vert
             #pragma fragment frag
 
+            #pragma multi_compile_fog
+
             #define SMOOTHSTEP_AA 0.01
 
             #include "UnityCG.cginc"
@@ -59,7 +61,7 @@
                 float2 noiseUV : TEXCOORD0;
                 float2 distortUV : TEXCOORD1;
                 float4 screenPosition : TEXCOORD2;
-                UNITY_FOG_COORDS(1)
+                UNITY_FOG_COORDS(3)
             };
 
             sampler2D _SurfaceNoise;

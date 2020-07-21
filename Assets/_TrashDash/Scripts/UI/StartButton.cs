@@ -13,6 +13,7 @@ using UnityEngine.Purchasing;
 public class StartButton : MonoBehaviour
 {
     [SerializeField] float delay;
+    [SerializeField] string sceneName;
     public void StartGame()
     {
         if (PlayerData.instance.ftueLevel == 0)
@@ -33,6 +34,6 @@ public class StartButton : MonoBehaviour
     private IEnumerator LoadDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -34,7 +34,8 @@
 			#pragma vertex vert
 			#pragma fragment frag
 			// Compile multiple versions of this shader depending on lighting settings.
-			#pragma multi_compile_fwdbase
+			//#pragma multi_compile_fwdbase
+			#pragma multi_compile_fog
 			
 			#include "UnityCG.cginc"
 			// Files below include macros and functions to assist
@@ -54,11 +55,12 @@
 				float4 pos : SV_POSITION;
 				float3 worldNormal : NORMAL;
 				float2 uv : TEXCOORD0;
-				float3 viewDir : TEXCOORD1;	
+				float3 viewDir : TEXCOORD1;
 				// Macro found in Autolight.cginc. Declares a vector4
 				// into the TEXCOORD2 semantic with varying precision 
 				// depending on platform target.
-				SHADOW_COORDS(2)
+				UNITY_FOG_COORDS(2)
+				SHADOW_COORDS(3)
 			};
 
 			sampler2D _MainTex;
@@ -73,6 +75,7 @@
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				// Defined in Autolight.cginc. Assigns the above shadow coordinate
 				// by transforming the vertex from world space to shadow-map space.
+				UNITY_TRANSFER_FOG(o, o.pos);
 				TRANSFER_SHADOW(o)
 				return o;
 			}
@@ -130,7 +133,10 @@
 
 				float4 sample = tex2D(_MainTex, i.uv);
 
-				return (light + _AmbientColor + specular + rim) * _Color * sample;
+				//return (light + _AmbientColor + specular + rim) * _Color * sample;
+				float4 col = (light + _AmbientColor + specular + rim) * _Color * sample;
+				UNITY_APPLY_FOG(i.fogCoord, col);
+				return col;
 			}
 			ENDCG
 		}

@@ -66,14 +66,14 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.28
+    - _Glossiness: 0.64
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimAmount: 0.352
-    - _RimThreshold: 0.134
+    - _RimAmount: 0.32
+    - _RimThreshold: 0.09
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -81,8 +81,8 @@ Material:
     - _WindQuality: 0
     - _ZWrite: 1
     m_Colors:
-    - _AmbientColor: {r: 0.5498847, g: 0.9811321, b: 0.32858673, a: 1}
-    - _Color: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
+    - _AmbientColor: {r: 0.28183562, g: 0.6886792, b: 0.07471521, a: 1}
+    - _Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _RimColor: {r: 0.71402144, g: 0.754717, b: 0.5660378, a: 1}

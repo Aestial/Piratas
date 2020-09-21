@@ -12,8 +12,8 @@
 		{
 			Tags
 			{
-				/*"LightMode" = "ForwardBase"
-				"PassFlags" = "OnlyDirecional"*/
+				//"LightMode" = "ForwardBase"
+				"PassFlags" = "OnlyDirecional"
 			}
 
 			CGPROGRAM
@@ -25,7 +25,7 @@
 
 			struct appdata
 			{
-				float4 vertex : POSITION;				
+				float4 vertex : POSITION;
 				float4 uv : TEXCOORD0;
 				float3 normal : NORMAL;
 			};

@@ -128,9 +128,6 @@
                 float4 col = alphaBlend(surfaceNoiseColor, waterColor);
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;
-
-                //return alphaBlend(surfaceNoiseColor, waterColor);
-				//return float4(1, 1, 1, 0.5);
             }
             ENDCG
         }
